@@ -152,9 +152,9 @@ end
 
 
 
-IO.puts(SundaysTail.count())
-IO.puts(SundaysRec.count())
-IO.puts(SundaysModular.count())
-IO.puts(SundaysMap.count())
-IO.puts(SundaysFor.count())
-IO.puts(SundaysStream.count())
+IO.puts("Результат полученный с помощью рекурсии" <> SundaysTail.count())
+IO.puts("Результат полученный с помощью хвостовой рекурсии" <> SundaysRec.count())
+IO.puts("Результат полученный с помощью модульной реализации" <> SundaysModular.count())
+IO.puts("Результат полученный с помощью map" <> SundaysMap.count())
+IO.puts("Результат полученный с помощью цикла for" <> SundaysFor.count())
+IO.puts("Результат полученный с помощью потока" <> SundaysStream.count())

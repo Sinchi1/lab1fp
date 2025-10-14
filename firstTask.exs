@@ -25,7 +25,7 @@ defmodule FirstTask1 do
   def main(grid) do
         IO.puts("Grid problem:")
         result = max_product(grid)
-        IO.puts("Максимальное произведение из 4 подряд идущих чисел: #{result} \n")
+        IO.puts("Максимальное произведение из 4 подряд идущих чисел (Рекурсия): #{result} \n")
   end
 end
 
@@ -49,7 +49,7 @@ defmodule EulerTailRec do
 
     def main(grid) do
         result = max_product(grid)
-        IO.puts("Максимальное произведение из 4 подряд идущих чисел: #{result} \n")
+        IO.puts("Максимальное произведение из 4 подряд идущих чисел (Хвостовая рекурсия): #{result} \n")
     end
 end
 
@@ -85,7 +85,7 @@ defmodule EulerModular do
 
     def main(grid) do
         result = max_product(grid)
-        IO.puts("Максимальное произведение из 4 подряд идущих чисел: #{result} \n")
+        IO.puts("Максимальное произведение из 4 подряд идущих чисел(Модульная реализация): #{result} \n")
     end
 end
 
@@ -112,7 +112,7 @@ defmodule EulerMap do
 
   def main(grid,w \\ 20, h \\ 20) do
         result = max_product(grid,w,h)
-        IO.puts("Максимальное произведение из 4 подряд идущих чисел: #{result} \n")
+        IO.puts("Максимальное произведение из 4 подряд идущих чисел (Через map): #{result} \n")
   end
 end
 
@@ -135,7 +135,7 @@ defmodule EulerFor do
 
   def main(grid,w \\ 20,h \\ 20) do
         result = max_product(grid, w,h)
-        IO.puts("Максимальное произведение из 4 подряд идущих чисел: #{result} \n")
+        IO.puts("Максимальное произведение из 4 подряд идущих чисел (Цикл For): #{result} \n")
   end
 end
 
@@ -163,7 +163,7 @@ defmodule EulerStream do
 
   def main(grid,w \\ 20,h \\ 20) do
         result = max_product(grid,w,h)
-        IO.puts("Максимальное произведение из 4 подряд идущих чисел: #{result} \n")
+        IO.puts("Максимальное произведение из 4 подряд идущих чисел (Потоки): #{result} \n")
   end
 end
 
