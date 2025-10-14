@@ -1,0 +1,30 @@
+name: Elixir CI
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Elixir and Erlang
+        uses: erlef/setup-beam@v1
+        with:
+          elixir-version: '1.17.3'   
+          otp-version: '27'          
+
+      - name: Check Elixir version
+        run: elixir -v
+
+      - name: Run firstTask.exs
+        run: elixir firstTask.exs
+
+      - name: Run secondTask.exs
+        run: elixir secondTask.exs
