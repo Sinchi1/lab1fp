@@ -1,10 +1,10 @@
-name: ci
+name: Elixir CI
 
 on:
   push:
-    branches: [ main ]
+    branches: [ main, master ]
   pull_request:
-    branches: [ main ]
+    branches: [ main, master ]
 
 jobs:
   test:
@@ -14,14 +14,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Set up Elixir
+      - name: Setup Elixir and Erlang
         uses: erlef/setup-beam@v1
         with:
-          elixir-version: '1.17.0'  
-          otp-version: '27.0'       
+          elixir-version: '1.17.3'   
+          otp-version: '27'          
 
-      - name: Install dependencies
-        run: mix deps.get
-
-      - name: Run tests
+      - name: 
         run: mix test
